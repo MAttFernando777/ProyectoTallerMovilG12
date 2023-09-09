@@ -1,4 +1,9 @@
 # proyecto_g12
+Integrantes:
+- Llerena Castillo, Valeria Estefania
+- Prado Cunto, Rodrigo
+- Ytusaca Quispe, Saúl Fernando
+
 
 A new Flutter project.
 
