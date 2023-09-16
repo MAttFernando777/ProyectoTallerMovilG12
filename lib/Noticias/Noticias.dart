@@ -15,6 +15,7 @@ class HomePageWidget extends StatefulWidget {
   _HomePageWidgetState createState() => _HomePageWidgetState();
 }
 
+
 class _HomePageWidgetState extends State<HomePageWidget>
     with TickerProviderStateMixin {
   late HomePageModel _model;
