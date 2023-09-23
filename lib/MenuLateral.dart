@@ -19,7 +19,7 @@ class MenuLateral extends StatelessWidget {
             decoration: BoxDecoration(
                 image: DecorationImage(
                     image: NetworkImage(
-                        "https://e.rpp-noticias.io/large/2016/01/07/024802_58863.jpg"),
+                        "https://www.infobae.com/new-resizer/OOLgk9RU2ybtn6VR_PNxV77TRMM=/arc-anglerfish-arc2-prod-infobae/public/XXF447NCCFDXFACDQI5Q7NQGM4.png"),
                     fit: BoxFit.cover)),
           ),
           Ink(
