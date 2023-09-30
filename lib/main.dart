@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:proyecto_g12/Conferencias.dart';
+import 'package:proyecto_g12/Busqueda.dart';
 import 'package:proyecto_g12/Convocatoria.dart';
 import 'package:proyecto_g12/Eventos.dart';
 import 'package:proyecto_g12/Footer.dart';
@@ -62,6 +64,33 @@ class MyApp extends StatelessWidget {
                         child: Center(child: Text('Eventos')),
                       ),
                     ),
+
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (BuildContext context) => Busqueda()));
+                      },
+                      child: Container(
+                        width: 100,
+                        height: 100,
+                        color: Colors.red,
+                        child: Center(child: Text('Busqueda')),
+                      ),
+                    ),
+
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (BuildContext context) => Conferencias()));
+                      },
+                      child: Container(
+                        width: 100,
+                        height: 100,
+                        color: Colors.red,
+                        child: Center(child: Text('Conferencias')),
+                      ),
+                    ),
+
                     GestureDetector(
                       onTap: () {
                         Navigator.of(context).push(MaterialPageRoute(
@@ -84,4 +113,5 @@ class MyApp extends StatelessWidget {
       ),
     );
   }
+
 }

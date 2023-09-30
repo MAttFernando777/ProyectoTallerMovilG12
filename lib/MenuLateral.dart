@@ -1,5 +1,7 @@
+import 'package:proyecto_g12/Conferencias.dart';
 import 'package:proyecto_g12/main.dart';
 import 'package:flutter/material.dart';
+import 'Busqueda.dart';
 import 'Desconectar.dart';
 import 'Convocatoria.dart';
 import 'Noticia.dart';
@@ -54,6 +56,24 @@ class MenuLateral extends StatelessWidget {
             },
           ),
           new ListTile(
+            title: Text("BUSQUEDA"),
+            onTap: () {
+              Navigator.of(context).pop();
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (BuildContext context) => Busqueda()));
+            },
+          ),
+
+          new ListTile(
+            title: Text("CONFERENCIAS"),
+            onTap: () {
+              Navigator.of(context).pop();
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (BuildContext context) => Conferencias()));
+            },
+          ),
+
+          new ListTile(
             title: Text("CONVOCATORIAS"),
             onTap: () {
               Navigator.of(context).pop();
@@ -74,3 +94,5 @@ class MenuLateral extends StatelessWidget {
     );
   }
 }
+
+
