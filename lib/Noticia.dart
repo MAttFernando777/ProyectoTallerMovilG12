@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:proyecto_g12/Footer.dart';
 import 'MenuLateral.dart';
+import 'Elemento.dart';
 
 class Noticia extends StatelessWidget {
   @override
@@ -30,7 +31,8 @@ class Noticia extends StatelessWidget {
                 children: <Widget>[
                   TextButton(
                     child: const Text("LEER MAS..."),
-                    onPressed: (){},
+                    onPressed: (){Navigator.of(context).push(MaterialPageRoute(
+                        builder: (BuildContext context) => Elemento()));},
                   ),
 
                 ]
