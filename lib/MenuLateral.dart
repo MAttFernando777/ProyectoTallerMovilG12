@@ -55,15 +55,14 @@ class MenuLateral extends StatelessWidget {
                   builder: (BuildContext context) => Eventos()));
             },
           ),
-          new ListTile(
+          /* new ListTile(
             title: Text("BUSQUEDA"),
             onTap: () {
               Navigator.of(context).pop();
               Navigator.of(context).push(MaterialPageRoute(
                   builder: (BuildContext context) => Busqueda()));
             },
-          ),
-
+          ), */
           new ListTile(
             title: Text("CONFERENCIAS"),
             onTap: () {
@@ -72,7 +71,6 @@ class MenuLateral extends StatelessWidget {
                   builder: (BuildContext context) => Conferencias()));
             },
           ),
-
           new ListTile(
             title: Text("CONVOCATORIAS"),
             onTap: () {
@@ -94,5 +92,3 @@ class MenuLateral extends StatelessWidget {
     );
   }
 }
-
-

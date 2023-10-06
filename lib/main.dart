@@ -64,8 +64,7 @@ class MyApp extends StatelessWidget {
                         child: Center(child: Text('Eventos')),
                       ),
                     ),
-
-                    GestureDetector(
+                    /* GestureDetector(
                       onTap: () {
                         Navigator.of(context).push(MaterialPageRoute(
                             builder: (BuildContext context) => Busqueda()));
@@ -76,8 +75,7 @@ class MyApp extends StatelessWidget {
                         color: Colors.red,
                         child: Center(child: Text('Busqueda')),
                       ),
-                    ),
-
+                    ), */
                     GestureDetector(
                       onTap: () {
                         Navigator.of(context).push(MaterialPageRoute(
@@ -90,7 +88,6 @@ class MyApp extends StatelessWidget {
                         child: Center(child: Text('Conferencias')),
                       ),
                     ),
-
                     GestureDetector(
                       onTap: () {
                         Navigator.of(context).push(MaterialPageRoute(
@@ -113,5 +110,4 @@ class MyApp extends StatelessWidget {
       ),
     );
   }
-
 }
