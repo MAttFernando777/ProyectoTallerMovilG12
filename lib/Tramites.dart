@@ -27,7 +27,7 @@ class Tramites extends StatelessWidget {
               ),
               Row(mainAxisAlignment: MainAxisAlignment.end, children: <Widget>[
                 TextButton(
-                  child: const Text("LEER MAS..."),
+                  child: const Text("Seguir leyendo"),
                   onPressed: () {
                     Navigator.of(context).push(MaterialPageRoute(
                         builder: (BuildContext context) => SecTram()));
@@ -38,48 +38,48 @@ class Tramites extends StatelessWidget {
 
               const ListTile(
                 leading: Icon(Icons.document_scanner),
-                title: Text("SEGUNDA NOTICIA"),
-                subtitle: Text("SUBTITULO SEGUNDA NOTICIA"),
+                title: Text("CARNÉ UNHIVERSITARIO"),
+                subtitle: Text("Trámite de Carné Universitario 2023 - Rezagados"),
               ),
               Row(mainAxisAlignment: MainAxisAlignment.end, children: <Widget>[
                 TextButton(
-                  child: const Text("LEER MAS..."),
+                  child: const Text("Seguir leyendo"),
                   onPressed: () {},
                 ),
               ]),
               Divider(),
               const ListTile(
                 leading: Icon(Icons.document_scanner),
-                title: Text("TERCERA NOTICIA"),
-                subtitle: Text("SUBTITULO TERCERA NOTICIA"),
+                title: Text("TRAMITE DE BACHILLER"),
+                subtitle: Text("Requisitos para tramitar el Grado Académico de Bachiller"),
               ),
               Row(mainAxisAlignment: MainAxisAlignment.end, children: <Widget>[
                 TextButton(
-                  child: const Text("LEER MAS..."),
+                  child: const Text("Seguir leyendo"),
                   onPressed: () {},
                 ),
               ]),
               Divider(),
               const ListTile(
                 leading: Icon(Icons.document_scanner),
-                title: Text("CUARTA NOTICIA"),
-                subtitle: Text("CUARTA TERCERA NOTICIA"),
+                title: Text("TRAMITE DE TITULO  PROFESIONAL"),
+                subtitle: Text("Requisitos para tramitar el Título Profesional"),
               ),
               Row(mainAxisAlignment: MainAxisAlignment.end, children: <Widget>[
                 TextButton(
-                  child: const Text("LEER MAS..."),
+                  child: const Text("Seguir leyendo"),
                   onPressed: () {},
                 ),
               ]),
               Divider(),
               const ListTile(
                 leading: Icon(Icons.document_scanner),
-                title: Text("QUINTA NOTICIA"),
-                subtitle: Text("SUBTITULO QUINTA NOTICIA"),
+                title: Text("RECTIFICACION DE MATRICULA"),
+                subtitle: Text("Requisitos para la salida o ingreso de cursos"),
               ),
               Row(mainAxisAlignment: MainAxisAlignment.end, children: <Widget>[
                 TextButton(
-                  child: const Text("bbobob MAS..."),
+                  child: const Text("Seguir leyendo"),
                   onPressed: () {},
                 ),
               ]),
