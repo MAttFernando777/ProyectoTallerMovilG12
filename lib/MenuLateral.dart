@@ -1,4 +1,5 @@
 import 'package:proyecto_g12/Conferencias.dart';
+import 'package:proyecto_g12/convocatorias.service.dart';
 import 'package:proyecto_g12/main.dart';
 import 'package:flutter/material.dart';
 import 'Busqueda.dart';
@@ -21,7 +22,7 @@ class MenuLateral extends StatelessWidget {
             decoration: BoxDecoration(
                 image: DecorationImage(
                     image: NetworkImage(
-                        "https://www.infobae.com/new-resizer/OOLgk9RU2ybtn6VR_PNxV77TRMM=/arc-anglerfish-arc2-prod-infobae/public/XXF447NCCFDXFACDQI5Q7NQGM4.png"),
+                        "https://upload.wikimedia.org/wikipedia/commons/4/46/UNMSM_Facultad_de_Ingenier%C3%ADa_de_Sistemas_e_Inform%C3%A1tica_2019_-_Vista_lateral.jpg"),
                     fit: BoxFit.cover)),
           ),
           Ink(
@@ -76,7 +77,10 @@ class MenuLateral extends StatelessWidget {
             onTap: () {
               Navigator.of(context).pop();
               Navigator.of(context).push(MaterialPageRoute(
-                  builder: (BuildContext context) => Convocatoria()));
+                  builder: (BuildContext context) => Convocatoria(
+                        convocatoriaService: ConvocatoriaService(
+                            baseUrl: 'http://192.168.1.75:3000'),
+                      )));
             },
           ),
           new ListTile(

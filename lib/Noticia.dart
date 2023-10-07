@@ -10,6 +10,7 @@ class Noticia extends StatelessWidget {
       drawer: MenuLateral(),
       appBar: AppBar(title: Text("NOTICIAS")),
       body: Center(
+          child: SingleChildScrollView(
         child: Card(
             child: Column(mainAxisSize: MainAxisSize.min, children: <Widget>[
           Container(
@@ -82,8 +83,20 @@ class Noticia extends StatelessWidget {
               onPressed: () {},
             ),
           ]),
+          Divider(),
+          const ListTile(
+            leading: Icon(Icons.festival),
+            title: Text("SEXTA NOTICIA"),
+            subtitle: Text("SUBTITULO SEXTA NOTICIA"),
+          ),
+          Row(mainAxisAlignment: MainAxisAlignment.end, children: <Widget>[
+            TextButton(
+              child: const Text("LEER MAS..."),
+              onPressed: () {},
+            ),
+          ]),
         ])),
-      ),
+      )),
       bottomNavigationBar: Footer(),
     );
   }

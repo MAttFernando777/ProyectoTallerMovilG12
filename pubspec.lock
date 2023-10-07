@@ -17,6 +17,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.1"
+  buffer:
+    dependency: transitive
+    description:
+      name: buffer
+      sha256: "94f60815065a8f0fd4f05be51faf86cf86519327e039d5c2aac72e1d1cc1dad4"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.2.2"
   camera:
     dependency: transitive
     description:
@@ -89,6 +97,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.3.3+5"
+  crypto:
+    dependency: transitive
+    description:
+      name: crypto
+      sha256: ff625774173754681d66daaf4a448684fb04b78f902da9cb3d308c19cc5e8bab
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.0.3"
   cupertino_icons:
     dependency: "direct main"
     description:
@@ -177,13 +193,21 @@ packages:
     source: sdk
     version: "0.0.0"
   http:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: http
       sha256: "759d1a329847dd0f39226c688d3e06a6b8679668e350e2891a6474f8b4bb8525"
       url: "https://pub.dev"
     source: hosted
     version: "1.1.0"
+  http_methods:
+    dependency: transitive
+    description:
+      name: http_methods
+      sha256: "6bccce8f1ec7b5d701e7921dca35e202d425b57e317ba1a37f2638590e29e566"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.1.1"
   http_parser:
     dependency: transitive
     description:
@@ -257,7 +281,7 @@ packages:
     source: hosted
     version: "0.2.1+1"
   intl:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: intl
       sha256: "3bc132a9dbce73a7e4a21a17d06e1878839ffbf975568bc875c60537824b0c4d"
@@ -392,6 +416,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.1"
+  logging:
+    dependency: transitive
+    description:
+      name: logging
+      sha256: "623a88c9594aa774443aa3eb2d41807a48486b5613e67599fb4c41c0ad47c340"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.2.0"
   matcher:
     dependency: transitive
     description:
@@ -424,6 +456,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.4"
+  mysql1:
+    dependency: "direct main"
+    description:
+      name: mysql1
+      sha256: "68aec7003d2abc85769bafa1777af3f4a390a90c31032b89636758ff8eb839e9"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.20.0"
+  mysql_client:
+    dependency: "direct main"
+    description:
+      name: mysql_client
+      sha256: "6a0fdcbe3e0721c637f97ad24649be2f70dbce2b21ede8f962910e640f753fc2"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.27"
   path:
     dependency: transitive
     description:
@@ -464,6 +512,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.6"
+  pool:
+    dependency: transitive
+    description:
+      name: pool
+      sha256: "20fe868b6314b322ea036ba325e6fc0711a22948856475e2c2b6306e8ab39c2a"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.5.1"
   quiver:
     dependency: transitive
     description:
@@ -480,6 +536,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "16.1.0"
+  shelf:
+    dependency: "direct main"
+    description:
+      name: shelf
+      sha256: ad29c505aee705f41a4d8963641f91ac4cee3c8fad5947e033390a7bd8180fa4
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.4.1"
+  shelf_router:
+    dependency: "direct main"
+    description:
+      name: shelf_router
+      sha256: f5e5d492440a7fb165fe1e2e1a623f31f734d3370900070b2b1e0d0428d59864
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.1.4"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -541,6 +613,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.6.0"
+  tuple:
+    dependency: transitive
+    description:
+      name: tuple
+      sha256: a97ce2013f240b2f3807bcbaf218765b6f301c3eff91092bcfa23a039e7dd151
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.2"
   typed_data:
     dependency: transitive
     description:

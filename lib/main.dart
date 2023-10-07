@@ -5,6 +5,7 @@ import 'package:proyecto_g12/Convocatoria.dart';
 import 'package:proyecto_g12/Tramites.dart';
 import 'package:proyecto_g12/Footer.dart';
 import 'package:proyecto_g12/Noticia.dart';
+import 'package:proyecto_g12/convocatorias.service.dart';
 import 'MenuLateral.dart';
 
 void main() => runApp(MyApp());
@@ -91,7 +92,10 @@ class MyApp extends StatelessWidget {
                     GestureDetector(
                       onTap: () {
                         Navigator.of(context).push(MaterialPageRoute(
-                            builder: (BuildContext context) => Convocatoria()));
+                            builder: (BuildContext context) => Convocatoria(
+                                  convocatoriaService: ConvocatoriaService(
+                                      baseUrl: 'http://192.168.1.75:3000'),
+                                )));
                       },
                       child: Container(
                         width: 100,
