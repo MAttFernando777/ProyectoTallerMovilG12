@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:proyecto_g12/Conferencias.dart';
 import 'package:proyecto_g12/Busqueda.dart';
 import 'package:proyecto_g12/Convocatoria.dart';
-import 'package:proyecto_g12/Eventos.dart';
+import 'package:proyecto_g12/Tramites.dart';
 import 'package:proyecto_g12/Footer.dart';
 import 'package:proyecto_g12/Noticia.dart';
 import 'MenuLateral.dart';
@@ -55,13 +55,13 @@ class MyApp extends StatelessWidget {
                     GestureDetector(
                       onTap: () {
                         Navigator.of(context).push(MaterialPageRoute(
-                            builder: (BuildContext context) => Eventos()));
+                            builder: (BuildContext context) => Tramites()));
                       },
                       child: Container(
                         width: 100,
                         height: 100,
                         color: Colors.red,
-                        child: Center(child: Text('Eventos')),
+                        child: Center(child: Text('Tramites')),
                       ),
                     ),
                     /* GestureDetector(

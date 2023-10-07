@@ -5,7 +5,7 @@ import 'Busqueda.dart';
 import 'Desconectar.dart';
 import 'Convocatoria.dart';
 import 'Noticia.dart';
-import 'Eventos.dart';
+import 'Tramites.dart';
 
 class MenuLateral extends StatelessWidget {
   @override
@@ -48,11 +48,11 @@ class MenuLateral extends StatelessWidget {
             },
           ),
           new ListTile(
-            title: Text("EVENTOS"),
+            title: Text("TRAMITES"),
             onTap: () {
               Navigator.of(context).pop();
               Navigator.of(context).push(MaterialPageRoute(
-                  builder: (BuildContext context) => Eventos()));
+                  builder: (BuildContext context) => Tramites()));
             },
           ),
           /* new ListTile(
