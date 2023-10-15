@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:proyecto_g12/Conferencias.dart';
 import 'package:proyecto_g12/Busqueda.dart';
@@ -7,6 +9,8 @@ import 'package:proyecto_g12/Footer.dart';
 import 'package:proyecto_g12/Noticia.dart';
 import 'package:proyecto_g12/convocatorias.service.dart';
 import 'MenuLateral.dart';
+import 'package:flutter/material.dart';
+import 'package:barcode_scan2/barcode_scan2.dart';
 
 void main() => runApp(MyApp());
 
@@ -110,8 +114,18 @@ class MyApp extends StatelessWidget {
             ],
           ),
         ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: (){
+            _scanCode();
+          },
+          child: Icon(Icons.camera),
+        ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerTop,
         bottomNavigationBar: Footer(),
       ),
     );
+  }
+  Future<void> _scanCode() async {
+    var result = await BarcodeScanner.scan();
   }
 }
