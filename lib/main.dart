@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:proyecto_g12/Conferencias.dart';
 import 'package:proyecto_g12/Busqueda.dart';
 import 'package:proyecto_g12/Convocatoria.dart';
+import 'package:proyecto_g12/Lector.dart';
 import 'package:proyecto_g12/Tramites.dart';
 import 'package:proyecto_g12/Footer.dart';
 import 'package:proyecto_g12/Noticia.dart';
@@ -116,7 +117,8 @@ class MyApp extends StatelessWidget {
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: (){
-            _scanCode();
+            Navigator.of(context).push(MaterialPageRoute(builder: (context)=>
+                Lector()));
           },
           child: Icon(Icons.camera),
         ),
@@ -124,8 +126,5 @@ class MyApp extends StatelessWidget {
         bottomNavigationBar: Footer(),
       ),
     );
-  }
-  Future<void> _scanCode() async {
-    var result = await BarcodeScanner.scan();
   }
 }
