@@ -8,7 +8,7 @@ class ConvocatoriaService {
   ConvocatoriaService({required this.baseUrl});
 
   Future<List<IConvocatoria>> getAllConvocatorias() async {
-    final response = await http.get(Uri.parse('$baseUrl/convocatorias'));
+    final response = await http.get(Uri.parse('$baseUrl/api/convocatorias'));
 
     if (response.statusCode == 200) {
       List<dynamic> data = json.decode(response.body);
@@ -21,7 +21,8 @@ class ConvocatoriaService {
   }
 
   Future<List<IConvocatoria>> getConvocatoriaById(int id) async {
-    final response = await http.get(Uri.parse('$baseUrl/convocatorias/$id'));
+    final response =
+        await http.get(Uri.parse('$baseUrl/api/convocatorias/$id'));
 
     if (response.statusCode == 200) {
       List<dynamic> data = json.decode(response.body);

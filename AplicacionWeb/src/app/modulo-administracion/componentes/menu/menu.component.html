@@ -1,0 +1,26 @@
+<div class="inicio" [routerLink]="['/administracion/inicio']" routerLinkActive="ruta_activa">
+  <mat-icon> home </mat-icon>
+  <div class="contenedor"> INICIO </div>
+</div>
+
+<mat-accordion>
+  <ng-container>
+    <ng-container>
+      <mat-expansion-panel class="menu" [hideToggle]=true routerLinkActive="menu_activo" [routerLinkActiveOptions]="{exact: true}">
+        <mat-expansion-panel-header [collapsedHeight]="'50px'">
+          <mat-panel-title class="menu" >
+            <div> <mat-icon> business_center </mat-icon> </div>
+            <div class="contenedor"> General </div>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <mat-nav-list class="lista-opciones">
+          <ng-container>
+            <a mat-list-item routerLinkActive="ruta_activa" class="lista-opciones"
+            [routerLink]="['convocatorias']"> Convocatorias </a>
+          </ng-container>
+        </mat-nav-list>
+      </mat-expansion-panel>
+    </ng-container>
+  </ng-container>
+</mat-accordion>

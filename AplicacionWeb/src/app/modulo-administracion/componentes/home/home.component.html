@@ -1,0 +1,19 @@
+<mat-sidenav-container>
+  <mat-sidenav
+    #Menu
+    class="sidenav"
+    fixedInViewport="true"
+    [attr.role]="'navigation'"
+    [opened]="true"
+    [mode]="'side'">
+    <app-datos-usuario></app-datos-usuario>
+    <mat-divider></mat-divider>
+    <app-menu></app-menu>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <app-toolbar-general
+     (cambiarEstadoMenu)="Menu.toggle()"></app-toolbar-general>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

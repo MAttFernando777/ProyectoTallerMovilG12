@@ -3,7 +3,6 @@ import 'package:proyecto_g12/Footer.dart';
 import 'package:proyecto_g12/MenuLateral.dart';
 import 'package:proyecto_g12/Convocatoria.modelo.dart';
 import 'package:proyecto_g12/convocatorias.service.dart';
-import 'package:intl/intl.dart';
 
 class Convocatoria extends StatefulWidget {
   final ConvocatoriaService convocatoriaService;
@@ -66,9 +65,8 @@ class _ConvocatoriaState extends State<Convocatoria> {
                         Row(
                           children: [
                             const Icon(Icons.attach_money),
-                            Text('S/ ' +
-                                convocatorias[index].salario.toString() +
-                                ' nuevos soles'),
+                            Text(
+                                'S/ ${convocatorias[index].salario} nuevos soles'),
                           ],
                         ),
                         Row(
