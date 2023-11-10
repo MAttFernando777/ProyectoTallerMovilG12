@@ -50,7 +50,7 @@ export class VentanaConvocatoriaComponent implements OnInit {
   getConvocatoria(id: number) {
     this._convocatoriaService.getConvocatoria(id).subscribe(data => {
       this.form.setValue({
-        logo: data.empresa,
+        logo: data.logo,
         empresa: data.empresa,
         puesto: data.puesto,
         salario: data.salario,
