@@ -1,0 +1,10 @@
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+}
+
+.mat-toolbar {
+  background-color: #621518;
+  color: white !important;
+  font: 500 20px/32px Roboto,Helvetica Neue,sans-serif;
+}

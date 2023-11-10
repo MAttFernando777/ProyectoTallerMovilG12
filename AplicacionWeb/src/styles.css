@@ -1,0 +1,9 @@
+@import 'src/estilos/generales.css';
+@import 'src/estilos/tarjetas.css';
+@import 'src/estilos/formularios.css';
+@import 'src/estilos/tablas.css';
+@import 'src/estilos/emergente.css';
+
+.mdc-list-item__primary-text {
+    color: #621518 !important
+}

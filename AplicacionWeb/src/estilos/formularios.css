@@ -1,0 +1,43 @@
+.columnas-1{
+  width: 80%
+}
+
+.columnas-2{
+  width: 90%
+}
+
+.columnas-3{
+  width: 93.33%
+}
+
+.columnas-4{
+  width: 95%
+}
+
+.abierto{
+  background-color: red;
+}
+
+.abierto mat-panel-title{
+  color: white;
+}
+
+.abierto > .mat-expansion-indicator:after {
+  color: white;
+}
+
+.titulo_filtro{
+  font-size: 18px ;
+  margin-left: 1.5% ;
+  width: 100% ;
+}
+
+.subtitulo_filtro{
+  font-size: 16px ;
+  margin-left: 1.5% ;
+  width: 100% ;
+}
+
+.acordeon-contenedor{
+  margin-top: 6px !important;
+}

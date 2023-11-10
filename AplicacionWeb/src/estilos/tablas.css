@@ -1,0 +1,104 @@
+
+mat-table, mat-cell, mat-header-cell, mat-footer-cell {
+  box-sizing: content-box !important;
+}
+
+/* Estilos para la tabla */
+mat-header-cell,
+mat-grid-tile-header {
+  font-size: 14px !important;
+  background-color: red;
+  color: #fff !important;
+}
+
+mat-row:nth-child(odd){
+  background-color:#F0F0F0 !important ;
+}
+
+mat-row:nth-child(even){
+  background-color:#FAFAFA !important ;
+}
+
+mat-row:hover {
+  background-color: red;
+}
+
+.contenedor-tabla{
+  width: 100%;
+  overflow: auto;
+}
+/******************/
+
+/* Estilos para la tabla secundaria */
+.secundaria mat-header-cell,
+.secundaria mat-grid-tile-header {
+  font-size: 14px !important;
+  background-color: red;
+  color: #fff !important;
+}
+
+/******************/
+
+.mat-sort-header-stem,
+.mat-sort-header-indicator{
+	color: white
+}
+
+mat-cell{
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+mat-footer-cell{
+  font-weight: bold;
+}
+
+.mat-column-opciones{
+  max-width: 10%;
+}
+
+.mat-column-id_estado{
+  max-width: 30px ;
+}
+
+
+.large .mat-paginator-range-label{
+  display: none !important;
+}
+
+
+.large2 .mat-paginator-page-size-label{
+  display: none !important;
+}
+
+
+.large3 .mat-paginator-page-size {
+  display: none !important;
+}
+
+.mat-paginator-range-label{
+  display: none !important;
+}
+
+.paginador-sin-flechas .mat-paginator-range-actions {
+  display: none !important ;
+}
+
+.clickeable {
+  cursor: pointer ;
+}
+
+.mat-column-logo{
+  max-width: 5%;
+}
+
+.logo-cliente{
+  max-width: 90%;
+  max-height: 100%
+}

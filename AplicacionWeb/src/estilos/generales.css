@@ -1,0 +1,18 @@
+*{
+  font-family: "Roboto", "Helvetica Neue", sans-serif ;
+}
+
+body{
+	margin: 0px;
+	height: 100vh;
+}
+
+.mat-drawer-container{
+  background-color: #EEEEEE !important;
+}
+
+.titulo{
+  padding: 25px;
+  font-size: 30px;
+  text-align: center;
+}

@@ -1,0 +1,55 @@
+mat-panel-title.menu {
+	color: #dedede !important
+}
+
+.lista-opciones{
+	color: #dedede !important ;
+	padding-left: 8px
+}
+
+.inicio{
+	height: 50px;
+	cursor: pointer;
+	color: #dedede !important;
+	font-size: 15px;
+	font-weight: 400;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 0 24px;
+	border-radius: inherit;
+}
+
+.contenedor{
+	margin-left: 5px;
+	padding-top: 3px
+}
+
+mat-expansion-panel.menu {
+	margin-top: 0;
+	margin-bottom: 0;
+	background: none !important ;
+	box-shadow: none !important ;
+}
+
+
+
+.mat-icon-button {
+	position: absolute;
+	right: 0;
+}
+
+.menu_activo mat-panel-title {
+	color: #621518 !important;
+}
+
+.ruta_activa {
+	color: #621518 !important;
+}
+
+.ruta_activa .lista-opciones {
+	color: #621518 !important;
+}
+
+
+
