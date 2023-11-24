@@ -84,7 +84,7 @@ class _ConvocatoriaState extends State<Convocatoria> {
                       ],
                     ),
                     trailing: ElevatedButton(
-                      child: const Text('Ver convocatoria'),
+                      child: const Text('Ver más'),
                       onPressed: () {
                         Navigator.of(context).push(MaterialPageRoute(
                             builder: (BuildContext context) =>

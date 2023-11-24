@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "110049920528",
+    "project_id": "proyectotallermovilg12",
+    "storage_bucket": "proyectotallermovilg12.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:110049920528:android:f70d0be79a03393ef9ec95",
+        "android_client_info": {
+          "package_name": "com.example.proyecto_g12"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqUN0XW_oRNgT1eUcpMbI6EPFKtA1X_I8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

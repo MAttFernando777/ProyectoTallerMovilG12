@@ -4,11 +4,13 @@ import 'MenuLateral.dart';
 import 'SecTram.dart';
 
 class Tramites extends StatelessWidget {
+  const Tramites({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
+    return Scaffold(
       drawer: MenuLateral(),
-      appBar: AppBar(title: Text("TRAMITES")),
+      appBar: AppBar(title: const Text("TRAMITES")),
       body: Center(
           child: SingleChildScrollView(
         child: Card(
@@ -18,7 +20,7 @@ class Tramites extends StatelessWidget {
             height: 100,
             padding: const EdgeInsets.all(10.0),
             color: Colors.red,
-            child: Center(child: Text('Tramites')),
+            child: const Center(child: Text('Tramites')),
           ),
           const ListTile(
             leading: Icon(Icons.document_scanner),
@@ -29,12 +31,16 @@ class Tramites extends StatelessWidget {
             TextButton(
               child: const Text("Seguir leyendo"),
               onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                    builder: (BuildContext context) => SecTram()));
+                showDialog(
+                  context: context,
+                  builder: (BuildContext context) {
+                    return SecTram();
+                  },
+                );
               },
             ),
           ]),
-          Divider(),
+          const Divider(),
           const ListTile(
             leading: Icon(Icons.document_scanner),
             title: Text("CARNÉ UNHIVERSITARIO"),
@@ -43,10 +49,17 @@ class Tramites extends StatelessWidget {
           Row(mainAxisAlignment: MainAxisAlignment.end, children: <Widget>[
             TextButton(
               child: const Text("Seguir leyendo"),
-              onPressed: () {},
+              onPressed: () {
+                showDialog(
+                  context: context,
+                  builder: (BuildContext context) {
+                    return SecTram();
+                  },
+                );
+              },
             ),
           ]),
-          Divider(),
+          const Divider(),
           const ListTile(
             leading: Icon(Icons.document_scanner),
             title: Text("TRAMITE DE BACHILLER"),
@@ -59,7 +72,7 @@ class Tramites extends StatelessWidget {
               onPressed: () {},
             ),
           ]),
-          Divider(),
+          const Divider(),
           const ListTile(
             leading: Icon(Icons.document_scanner),
             title: Text("TRAMITE DE TITULO  PROFESIONAL"),
@@ -71,7 +84,7 @@ class Tramites extends StatelessWidget {
               onPressed: () {},
             ),
           ]),
-          Divider(),
+          const Divider(),
           const ListTile(
             leading: Icon(Icons.document_scanner),
             title: Text("RECTIFICACION DE MATRICULA"),

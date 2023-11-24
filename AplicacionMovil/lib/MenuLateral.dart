@@ -1,9 +1,9 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:proyecto_g12/Conferencias.dart';
+import 'package:proyecto_g12/Home.dart';
 import 'package:proyecto_g12/convocatorias.service.dart';
 import 'package:proyecto_g12/main.dart';
 import 'package:flutter/material.dart';
-import 'Busqueda.dart';
-import 'Desconectar.dart';
 import 'Convocatoria.dart';
 import 'Noticia.dart';
 import 'Tramites.dart';
@@ -13,10 +13,10 @@ class MenuLateral extends StatelessWidget {
   bool isSelected = false;
 
   Widget build(BuildContext context) {
-    return new Drawer(
+    return Drawer(
       child: ListView(
         children: <Widget>[
-          new UserAccountsDrawerHeader(
+          const UserAccountsDrawerHeader(
             accountName: Text("FisiApp"),
             accountEmail: Text("rodrigo.prado@unmsm.edu.pe"),
             decoration: BoxDecoration(
@@ -26,54 +26,46 @@ class MenuLateral extends StatelessWidget {
                     fit: BoxFit.cover)),
           ),
           Ink(
-            color: Colors.red,
-            child: new ListTile(
-              title: Text(
+            color: Color(0xFF621518),
+            child: ListTile(
+              title: const Text(
                 "INICIO",
                 style: TextStyle(color: Colors.white),
               ),
               onTap: () {
                 Navigator.of(context).pop();
                 Navigator.of(context).push(MaterialPageRoute(
-                    builder: (BuildContext context) => MyApp()));
+                    builder: (BuildContext context) => HomePage()));
               },
             ),
           ),
           ListTile(
             tileColor: isSelected ? Colors.blue : null,
-            title: Text('NOTICIAS'),
+            title: const Text('NOTICIAS'),
             onTap: () {
               Navigator.of(context).pop();
               Navigator.of(context).push(MaterialPageRoute(
                   builder: (BuildContext context) => Noticia()));
             },
           ),
-          new ListTile(
-            title: Text("TRAMITES"),
+          ListTile(
+            title: const Text("TRAMITES"),
             onTap: () {
               Navigator.of(context).pop();
               Navigator.of(context).push(MaterialPageRoute(
-                  builder: (BuildContext context) => Tramites()));
+                  builder: (BuildContext context) => const Tramites()));
             },
           ),
-          /* new ListTile(
-            title: Text("BUSQUEDA"),
-            onTap: () {
-              Navigator.of(context).pop();
-              Navigator.of(context).push(MaterialPageRoute(
-                  builder: (BuildContext context) => Busqueda()));
-            },
-          ), */
-          new ListTile(
-            title: Text("CONFERENCIAS"),
+          ListTile(
+            title: const Text("CONFERENCIAS"),
             onTap: () {
               Navigator.of(context).pop();
               Navigator.of(context).push(MaterialPageRoute(
                   builder: (BuildContext context) => Conferencias()));
             },
           ),
-          new ListTile(
-            title: Text("CONVOCATORIAS"),
+          ListTile(
+            title: const Text("CONVOCATORIAS"),
             onTap: () {
               Navigator.of(context).pop();
               Navigator.of(context).push(MaterialPageRoute(
@@ -83,12 +75,11 @@ class MenuLateral extends StatelessWidget {
                       )));
             },
           ),
-          new ListTile(
-            title: Text("Salir"),
+          ListTile(
+            title: const Text("Salir"),
             onTap: () {
-              Navigator.of(context).pop();
-              Navigator.of(context).push(MaterialPageRoute(
-                  builder: (BuildContext context) => Desconectar()));
+              FirebaseAuth.instance.signOut();
+              Navigator.pushNamed(context, "/login");
             },
           ),
         ],

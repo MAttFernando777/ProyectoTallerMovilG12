@@ -44,6 +44,11 @@ dependencies:
   reactive_forms: ^16.1.0
   learning: ^0.0.6
   mysql1: ^0.20.0
+  firebase_core: ^2.23.0
+  firebase_auth: ^4.14.1
+  cloud_firestore: ^4.13.2
+  fluttertoast: ^8.2.4
+  font_awesome_flutter: ^10.6.0
 
 dev_dependencies:
   flutter_test:
@@ -68,9 +73,8 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  assets:
+    - assets/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

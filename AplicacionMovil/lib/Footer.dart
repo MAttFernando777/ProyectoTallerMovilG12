@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:proyecto_g12/Home.dart';
 import 'package:proyecto_g12/main.dart';
 
 class Footer extends StatelessWidget {
@@ -22,7 +23,7 @@ class Footer extends StatelessWidget {
       onTap: (int index) {
         if (index == 1) {
           Navigator.of(context).push(
-              MaterialPageRoute(builder: (BuildContext context) => MyApp()));
+              MaterialPageRoute(builder: (BuildContext context) => HomePage()));
         }
       },
     );
