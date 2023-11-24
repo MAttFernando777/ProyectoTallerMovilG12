@@ -7,6 +7,7 @@ class Conferencias extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        drawer: MenuLateral(),
         appBar: AppBar(title: Text("CONFERENCIAS")),
         body: Center(
             child: SingleChildScrollView(

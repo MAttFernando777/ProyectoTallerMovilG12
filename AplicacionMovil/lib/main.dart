@@ -1,130 +1,57 @@
 import 'dart:async';
 
+import 'package:firebase_core/firebase_core.dart';
+import 'package:proyecto_g12/Home.dart';
+import 'package:proyecto_g12/login_page.dart';
+import 'package:proyecto_g12/sign_up_page.dart';
+import 'package:proyecto_g12/splash_screen.dart';
+import 'firebase_options.dart';
 import 'package:flutter/material.dart';
-import 'package:proyecto_g12/Conferencias.dart';
-import 'package:proyecto_g12/Busqueda.dart';
-import 'package:proyecto_g12/Convocatoria.dart';
-import 'package:proyecto_g12/Lector.dart';
-import 'package:proyecto_g12/Tramites.dart';
-import 'package:proyecto_g12/Footer.dart';
-import 'package:proyecto_g12/Noticia.dart';
-import 'package:proyecto_g12/convocatorias.service.dart';
-import 'MenuLateral.dart';
-import 'package:flutter/material.dart';
-import 'package:barcode_scan2/barcode_scan2.dart';
 
-void main() => runApp(MyApp());
+void main() async {
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.red,
-      ),
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text("INICIO"),
+        debugShowCheckedModeBanner: false,
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          primarySwatch: createMaterialColor(Color(0xFF812f32)),
         ),
-        drawer: MenuLateral(),
-        body: LayoutBuilder(
-          builder: (context, constraints) => Stack(
-            children: [
-              Positioned(
-                top: 0,
-                left: 0,
-                right: 0,
-                height: constraints.maxHeight / 3,
-                child: Image.network(
-                  'https://upload.wikimedia.org/wikipedia/commons/4/46/UNMSM_Facultad_de_Ingenier%C3%ADa_de_Sistemas_e_Inform%C3%A1tica_2019_-_Vista_lateral.jpg',
-                  fit: BoxFit.cover,
-                ),
-              ),
-              Center(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.of(context).push(MaterialPageRoute(
-                            builder: (BuildContext context) => Noticia()));
-                      },
-                      child: Container(
-                        width: 100,
-                        height: 100,
-                        color: Colors.red,
-                        child: Center(child: Text('Noticias')),
-                      ),
-                    ),
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.of(context).push(MaterialPageRoute(
-                            builder: (BuildContext context) => Tramites()));
-                      },
-                      child: Container(
-                        width: 100,
-                        height: 100,
-                        color: Colors.red,
-                        child: Center(child: Text('Tramites')),
-                      ),
-                    ),
-                    /* GestureDetector(
-                      onTap: () {
-                        Navigator.of(context).push(MaterialPageRoute(
-                            builder: (BuildContext context) => Busqueda()));
-                      },
-                      child: Container(
-                        width: 100,
-                        height: 100,
-                        color: Colors.red,
-                        child: Center(child: Text('Busqueda')),
-                      ),
-                    ), */
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.of(context).push(MaterialPageRoute(
-                            builder: (BuildContext context) => Conferencias()));
-                      },
-                      child: Container(
-                        width: 100,
-                        height: 100,
-                        color: Colors.red,
-                        child: Center(child: Text('Conferencias')),
-                      ),
-                    ),
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.of(context).push(MaterialPageRoute(
-                            builder: (BuildContext context) => Convocatoria(
-                                  convocatoriaService: ConvocatoriaService(
-                                      baseUrl: 'http://192.168.1.75:3000'),
-                                )));
-                      },
-                      child: Container(
-                        width: 100,
-                        height: 100,
-                        color: Colors.red,
-                        child: Center(child: Text('Convocatorias')),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
-        ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: (){
-            Navigator.of(context).push(MaterialPageRoute(builder: (context)=>
-                Lector()));
-          },
-          child: Icon(Icons.camera),
-        ),
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerTop,
-        bottomNavigationBar: Footer(),
-      ),
-    );
+        routes: {
+          '/': (context) => SplashScreen(child: const LoginPage()),
+          '/login': (context) => const LoginPage(),
+          '/signUp': (context) => SignUpPage(),
+          '/home': (context) => const HomePage(),
+        });
+  }
+
+  MaterialColor createMaterialColor(Color color) {
+    List<int> strengths = <int>[
+      50,
+      100,
+      200,
+      300,
+      400,
+      500,
+      600,
+      700,
+      800,
+      900
+    ];
+    Map<int, Color> swatch = <int, Color>{};
+    final int r = color.red, g = color.green, b = color.blue;
+
+    for (int strength in strengths) {
+      swatch[strength] = Color.fromRGBO(r, g, b, 1);
+    }
+
+    return MaterialColor(color.value, swatch);
   }
 }
