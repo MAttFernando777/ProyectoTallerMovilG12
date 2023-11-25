@@ -35,8 +35,8 @@ class _MessagesScreenState extends State<MessagesScreen> {
                               widget.messages[index]['isUserMessage'] ? 20 : 0),
                         ),
                         color: widget.messages[index]['isUserMessage']
-                            ? Colors.grey.shade800
-                            : Colors.grey.shade900.withOpacity(0.8)),
+                            ? Colors.white
+                            : Color(0xFF621518)),
                     constraints: BoxConstraints(maxWidth: w * 2 / 3),
                     child:
                         Text(widget.messages[index]['message'].text.text[0])),
@@ -44,7 +44,7 @@ class _MessagesScreenState extends State<MessagesScreen> {
             ),
           );
         },
-        separatorBuilder: (_, i) => Padding(padding: EdgeInsets.only(top: 10)),
+        separatorBuilder: (_, i) => Padding(padding: EdgeInsets.only(top: 5)),
         itemCount: widget.messages.length);
   }
 }
