@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:proyecto_g12/Conferencias.dart';
 import 'package:proyecto_g12/Convocatoria.dart';
 import 'package:proyecto_g12/Footer.dart';
-import 'package:proyecto_g12/Lector.dart';
 import 'package:proyecto_g12/MenuLateral.dart';
 import 'package:proyecto_g12/Noticia.dart';
 import 'package:proyecto_g12/Tramites.dart';
@@ -114,16 +113,6 @@ class _HomePageState extends State<HomePage> {
             ],
           ),
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Navigator.of(context).push(
-            MaterialPageRoute(
-              builder: (context) => Lector(),
-            ),
-          );
-        },
-        child: const Icon(Icons.camera),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerTop,
       bottomNavigationBar: Footer(),

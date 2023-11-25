@@ -10,7 +10,7 @@
         <mat-expansion-panel-header [collapsedHeight]="'50px'">
           <mat-panel-title class="menu" >
             <div> <mat-icon> business_center </mat-icon> </div>
-            <div class="contenedor"> General </div>
+            <div class="contenedor"> GENERAL </div>
           </mat-panel-title>
         </mat-expansion-panel-header>
 
@@ -21,6 +21,23 @@
           </ng-container>
         </mat-nav-list>
       </mat-expansion-panel>
+
+      <mat-expansion-panel class="menu" [hideToggle]=true routerLinkActive="menu_activo" [routerLinkActiveOptions]="{exact: true}">
+        <mat-expansion-panel-header [collapsedHeight]="'50px'">
+          <mat-panel-title class="menu" >
+            <div> <mat-icon> emoji_emotions </mat-icon> </div>
+            <div class="contenedor"> USUARIOS </div>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <mat-nav-list class="lista-opciones">
+          <ng-container>
+            <a mat-list-item routerLinkActive="ruta_activa" class="lista-opciones"
+            [routerLink]="['usuarios']"> Relación de usuarios </a>
+          </ng-container>
+        </mat-nav-list>
+      </mat-expansion-panel>
+      
     </ng-container>
   </ng-container>
 </mat-accordion>

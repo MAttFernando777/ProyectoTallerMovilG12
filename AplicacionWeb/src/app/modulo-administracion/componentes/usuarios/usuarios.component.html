@@ -1,0 +1,54 @@
+<mat-toolbar class="barra">
+    <mat-toolbar-row> Listado de usuarios</mat-toolbar-row>
+  </mat-toolbar>
+  <mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
+    
+  <button mat-fab class="derecha" (click)="agregar()" matTooltip="Crear nuevo usuario">
+    <mat-icon> add </mat-icon>
+  </button>
+
+  <mat-card class="card">
+    <form>
+      <mat-grid-list cols=4 rowHeight="70px">
+        <mat-grid-tile colspan=1>
+          
+          <mat-form-field class="columnas-1">
+            <mat-label>Nombre</mat-label>
+            <input matInput #input>
+            <mat-icon matSuffix>search</mat-icon>
+          </mat-form-field>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </form>
+
+    <mat-card-content>
+      <mat-table class="mat-elevation-z8"  matSort>
+        <ng-container matColumnDef="codigo">
+          <mat-header-cell *matHeaderCellDef> Código </mat-header-cell>
+          <mat-cell *matCellDef="let element">{{element.empresa}}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="nombre">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Nombre </mat-header-cell>
+          <mat-cell *matCellDef="let element">{{element.puesto}}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="correo">
+          <mat-header-cell *matHeaderCellDef> Correo </mat-header-cell>
+          <mat-cell *matCellDef="let element">S/ {{element.salario}}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="opciones">
+          <mat-header-cell *matHeaderCellDef> Opciones </mat-header-cell>
+          <mat-cell *matCellDef="let element">
+            <button mat-icon-button matTooltip="Editar" color="primary"><mat-icon> edit </mat-icon></button>
+            <button mat-icon-button matTooltip="Eliminar" color="warn"><mat-icon> delete </mat-icon></button>
+          </mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="columnas"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: columnas;"></mat-row>
+      </mat-table>
+      <mat-paginator [pageSizeOptions]="[10,50,100]"></mat-paginator>
+    </mat-card-content>
+  </mat-card>

@@ -1,0 +1,53 @@
+<mat-card class="card-emergente">
+  <mat-toolbar style="background-color: #812f32;color: white;">
+    {{ operacion }} Usuario    
+    <span class="espacio"> </span>
+    <mat-spinner *ngIf="loading" [diameter]="30"></mat-spinner>
+  </mat-toolbar>
+
+  <form [formGroup]="formReg" autocomplete="off" (ngSubmit)="onSubmit()">
+    <mat-card-content>
+      <mat-grid-list cols="1" rowHeight="70px">
+        <mat-grid-tile colspan=1>
+          <mat-form-field class="columnas-1">
+            <mat-label> Correo </mat-label>
+            <input matInput placeholder="Correo" formControlName="email">
+          </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile colspan=1>
+          <mat-form-field class="columnas-1">
+            <mat-label> Contraseña </mat-label>
+            <input matInput placeholder="Contraseña" formControlName="password">
+          </mat-form-field>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </mat-card-content>
+    <mat-card-actions align="start">
+      <button type="button" (click)="cancelar()" mat-button>Cancelar</button>
+      <button
+        type="submit"
+        value="Enviar"
+        mat-button
+        cdkFocusInitial
+        style="background-color: #812f32;color: white;">
+        Guardar
+      </button>
+    </mat-card-actions>
+  </form>
+</mat-card>
+
+
+
+
+<!-- <h2>Registro de usuario</h2>
+<form [formGroup]="formReg" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input type="text" class="form-control" formControlName="email">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Password</label>
+        <input type="password" class="form-control" formControlName="password">
+    </div>
+    <input type="submit" value="Enviar">
+</form> -->
