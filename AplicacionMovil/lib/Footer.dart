@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:proyecto_g12/Home.dart';
 import 'package:proyecto_g12/main.dart';
+import 'package:proyecto_g12/chat.dart';
 
 class Footer extends StatelessWidget {
   @override
@@ -8,8 +9,9 @@ class Footer extends StatelessWidget {
     return BottomNavigationBar(
       items: const <BottomNavigationBarItem>[
         BottomNavigationBarItem(
-          icon: Icon(Icons.search),
-          label: 'Buscar',
+          icon: Icon(Icons.chat),
+          label: 'Chat',
+          
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.home),
@@ -24,6 +26,10 @@ class Footer extends StatelessWidget {
         if (index == 1) {
           Navigator.of(context).push(
               MaterialPageRoute(builder: (BuildContext context) => HomePage()));
+        }
+        if (index == 0) {
+          Navigator.of(context).push(
+              MaterialPageRoute(builder: (BuildContext context) => Chat()));
         }
       },
     );
