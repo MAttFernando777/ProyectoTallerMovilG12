@@ -11,6 +11,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ConvocatoriasComponent } from './componentes/convocatorias/convocatorias.component';
 import { VentanaConvocatoriaComponent } from './componentes/convocatorias/ventana-convocatoria/ventana-convocatoria.component';
+import { UsuariosComponent } from './componentes/usuarios/usuarios.component';
+import { VentanaUsuariosComponent } from './componentes/usuarios/ventana-usuarios/ventana-usuarios.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { VentanaConvocatoriaComponent } from './componentes/convocatorias/ventan
     DatosUsuarioComponent,
     ToolbarGeneralComponent,
     ConvocatoriasComponent,
-    VentanaConvocatoriaComponent
+    VentanaConvocatoriaComponent,
+    UsuariosComponent,
+    VentanaUsuariosComponent
   ],
   imports: [
     MaterialModule,

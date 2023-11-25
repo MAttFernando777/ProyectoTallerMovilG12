@@ -34,6 +34,62 @@ class _ConvocatoriaState extends State<Convocatoria> {
     }
   }
 
+  Container _buildConvocatoriaCard(IConvocatoria convocatoria) {
+    return Container(
+      margin: EdgeInsets.all(10),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.5),
+            spreadRadius: 2,
+            blurRadius: 5,
+            offset: Offset(0, 2),
+          ),
+        ],
+      ),
+      child: Card(
+        elevation: 0,
+        child: ListTile(
+          leading: Image.network(convocatoria.logo),
+          title: Text(convocatoria.empresa),
+          subtitle: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(convocatoria.puesto),
+              Row(
+                children: [
+                  const Icon(Icons.attach_money),
+                  Text('S/ ${convocatoria.salario} nuevos soles'),
+                ],
+              ),
+              Row(
+                children: [
+                  const Icon(Icons.location_on),
+                  Text(convocatoria.lugar),
+                ],
+              ),
+              Row(
+                children: [
+                  const Icon(Icons.calendar_today),
+                  Text(convocatoria.fecha.toString()),
+                ],
+              ),
+            ],
+          ),
+          trailing: ElevatedButton(
+            child: const Text('Ver más'),
+            onPressed: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (BuildContext context) =>
+                      ElementoConvocatoria(convocatoria: convocatoria)));
+            },
+          ),
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,59 +97,11 @@ class _ConvocatoriaState extends State<Convocatoria> {
       appBar: AppBar(title: Text("CONVOCATORIAS")),
       body: Column(
         children: [
-          Center(
-            child: Container(
-              width: 150,
-              height: 100,
-              padding: const EdgeInsets.all(10.0),
-              color: Colors.red,
-              child: const Center(child: Text('Convocatorias')),
-            ),
-          ),
           Expanded(
             child: ListView.builder(
               itemCount: convocatorias.length,
               itemBuilder: (BuildContext context, int index) {
-                return Card(
-                  child: ListTile(
-                    leading: Image.network(convocatorias[index].logo),
-                    title: Text(convocatorias[index].empresa),
-                    subtitle: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(convocatorias[index].puesto),
-                        Row(
-                          children: [
-                            const Icon(Icons.attach_money),
-                            Text(
-                                'S/ ${convocatorias[index].salario} nuevos soles'),
-                          ],
-                        ),
-                        Row(
-                          children: [
-                            const Icon(Icons.location_on),
-                            Text(convocatorias[index].lugar),
-                          ],
-                        ),
-                        Row(
-                          children: [
-                            const Icon(Icons.calendar_today),
-                            Text(convocatorias[index].fecha.toString()),
-                          ],
-                        ),
-                      ],
-                    ),
-                    trailing: ElevatedButton(
-                      child: const Text('Ver más'),
-                      onPressed: () {
-                        Navigator.of(context).push(MaterialPageRoute(
-                            builder: (BuildContext context) =>
-                                ElementoConvocatoria(
-                                    convocatoria: convocatorias[index])));
-                      },
-                    ),
-                  ),
-                );
+                return _buildConvocatoriaCard(convocatorias[index]);
               },
             ),
           ),
