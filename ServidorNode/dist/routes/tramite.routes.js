@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const tramite_controller_1 = require("../controllers/tramite.controller");
+const router = (0, express_1.Router)();
+router.get('/', tramite_controller_1.getTramites);
+router.get('/:id', tramite_controller_1.getTramite);
+router.delete('/:id', tramite_controller_1.deleteTramite);
+router.post('/', tramite_controller_1.postTramite);
+router.put('/:id', tramite_controller_1.putTramite);
+exports.default = router;

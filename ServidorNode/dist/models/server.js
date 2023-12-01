@@ -6,6 +6,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const paciente_routes_1 = __importDefault(require("../routes/paciente.routes"));
 const convocatoria_routes_1 = __importDefault(require("../routes/convocatoria.routes"));
+const noticia_routes_1 = __importDefault(require("../routes/noticia.routes"));
+const tramite_routes_1 = __importDefault(require("../routes/tramite.routes"));
+const conferencia_routes_1 = __importDefault(require("../routes/conferencia.routes"));
 const connection_1 = __importDefault(require("../db/connection"));
 const cors_1 = __importDefault(require("cors"));
 const morgan_1 = __importDefault(require("morgan"));
@@ -32,6 +35,9 @@ class Server {
     routes() {
         this.app.use('/api/pacientes', paciente_routes_1.default);
         this.app.use('/api/convocatorias', convocatoria_routes_1.default);
+        this.app.use('/api/noticias', noticia_routes_1.default);
+        this.app.use('/api/tramites', tramite_routes_1.default);
+        this.app.use('/api/conferencias', conferencia_routes_1.default);
     }
     conectarDB() {
         connection_1.default.connect((err) => {

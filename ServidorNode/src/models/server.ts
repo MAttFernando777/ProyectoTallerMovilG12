@@ -1,6 +1,9 @@
 import express, {Application} from 'express';
 import routesPacientes from '../routes/paciente.routes'
 import routesConvocatorias from '../routes/convocatoria.routes'
+import routesNoticias from '../routes/noticia.routes'
+import routesTramites from '../routes/tramite.routes'
+import routesConferencias from '../routes/conferencia.routes'
 import connection from '../db/connection';
 import cors from 'cors';
 import morgan from 'morgan';
@@ -36,6 +39,9 @@ class Server {
   routes() {
     this.app.use('/api/pacientes', routesPacientes);
     this.app.use('/api/convocatorias', routesConvocatorias);
+    this.app.use('/api/noticias', routesNoticias);
+    this.app.use('/api/tramites', routesTramites);
+    this.app.use('/api/conferencias', routesConferencias);
   }
 
   conectarDB() {
