@@ -71,7 +71,7 @@ class MenuLateral extends StatelessWidget {
               Navigator.of(context).push(MaterialPageRoute(
                   builder: (BuildContext context) => Convocatoria(
                         convocatoriaService: ConvocatoriaService(
-                            baseUrl: 'http://192.168.1.75:3000'),
+                            baseUrl: 'https://app-api-hxbx.onrender.com'),
                       )));
             },
           ),

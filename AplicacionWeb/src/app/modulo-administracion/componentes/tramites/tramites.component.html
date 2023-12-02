@@ -1,0 +1,59 @@
+<mat-toolbar class="barra">
+    <mat-toolbar-row> Listado de tramites</mat-toolbar-row>
+  </mat-toolbar>
+  <mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
+    
+  <button mat-fab class="derecha" (click)="agregar()" matTooltip="Crear nuevo tramite">
+    <mat-icon> add </mat-icon>
+  </button>
+  
+  <mat-card class="card">
+    <form>
+      <mat-grid-list cols=4 rowHeight="70px">
+        <mat-grid-tile colspan=1>
+          
+          <mat-form-field class="columnas-1">
+            <mat-label>Titulo</mat-label>
+            <input matInput (keyup)="applyFilter($event)" #input>
+            <mat-icon matSuffix>search</mat-icon>
+          </mat-form-field>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </form>
+  
+    <mat-card-content>
+      <mat-table class="mat-elevation-z8" [dataSource]="dataSource" matSort>
+        <ng-container matColumnDef="titulo">
+          <mat-header-cell *matHeaderCellDef> Titulo </mat-header-cell>
+          <mat-cell *matCellDef="let element">{{element.titulo}}</mat-cell>
+        </ng-container>
+  
+        <ng-container matColumnDef="subtitulo">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Subtitulo </mat-header-cell>
+          <mat-cell *matCellDef="let element">{{element.subtitulo}}</mat-cell>
+        </ng-container>
+  
+        <ng-container matColumnDef="descripcion">
+          <mat-header-cell *matHeaderCellDef> Descripcion </mat-header-cell>
+          <mat-cell *matCellDef="let element">{{element.descripcion}}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="fecha">
+          <mat-header-cell *matHeaderCellDef> Fecha </mat-header-cell>
+          <mat-cell *matCellDef="let element">{{element.fecha | date:'dd/MM/yyyy'}}</mat-cell>
+        </ng-container>
+  
+        <ng-container matColumnDef="opciones">
+          <mat-header-cell *matHeaderCellDef> Opciones </mat-header-cell>
+          <mat-cell *matCellDef="let element">
+            <button mat-icon-button matTooltip="Editar" color="primary" (click)="agregar(element.id)"><mat-icon> edit </mat-icon></button>
+            <button mat-icon-button matTooltip="Eliminar" color="warn" (click)="eliminar(element.id)" ><mat-icon> delete </mat-icon></button>
+          </mat-cell>
+        </ng-container>
+  
+        <mat-header-row *matHeaderRowDef="columnas"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: columnas;"></mat-row>
+      </mat-table>
+      <mat-paginator [pageSizeOptions]="[10,50,100]"></mat-paginator>
+    </mat-card-content>
+  </mat-card>

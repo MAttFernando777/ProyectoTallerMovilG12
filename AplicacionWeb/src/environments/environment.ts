@@ -8,6 +8,6 @@ export const environment = {
     messagingSenderId: '110049920528',
   },
   production: false,
-  endpoint: 'http://localhost:3000/'
+  endpoint: 'https://app-api-hxbx.onrender.com/'
 };
 

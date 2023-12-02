@@ -1,2 +1,14 @@
-
+{
+    "type": "service_account",
+    "project_id": "ayudabot-yodv",
+    "private_key_id": "6fc5fb1584cfcce85249e322a56ad3ec2fa1b98c",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDYyapkn07+LAoZ\nNpp2aKuCxtHGdvYXafaZ+VeOoirdVRy0CM8sMC2oaPlWcjvvyT/+r70PqIayH9bc\nGn3FlRx+XIsij0xjKMahY3C7kz6oklJ9gZQKoeioNymqzOeAfP5+4yoQ6RABwRr2\nR9kBggOSMzPslQ4CW2CtMcifg7F6qA0LqhFL+I3bftyHcr+7/Y7mnoeOdQ6FqWoT\ndIA61DpdescvFTfH1v/2ox2tUEV/sGZXsPba0u1QJhAVxFSCRZLSAhu5Eb0MZFRP\n8HbOmv2QTlhOeqRA8a8KjFokQtzbE4d7it5QQ1qZpE48TnANP4VNbfmMc8qsqGGQ\nBQJSYUSJAgMBAAECggEAHmSHgvviszexYr+JADjEct0048Ih1j6A2C1g3RpXMBiS\noZrqkKNgg0/URQ5W4NMyKZ6xvtQ9rhNQqCL+pwi0qfKHfxzf9LbuwgmS8HlAO5nn\n/rh/7M2uNIcnTE7V1emwNFHcv+os2FIeWZDRF6kGnySWjwCGqkXtU9q66cIoy60p\nt+vEqCZi9dFtXD91LbAVj6idxMZxEsUxj+mP7PohIXw5VFm04lw0cvUQp+bR2dKj\nHljwY5aUwtiGqRN0Di/2+5zgE2Gw12kyMw1EdKajUNDcaYvwDLUnrJ74kM4FEK4c\nMSSZnzcbrNcrYlz3CArDb9P4qDKHJldQW3Tla/D7kQKBgQDuFOlXiTaEHeZBizNB\nKFxEfThtN3IevLIZant4N77/6mEGhIfIuIhA/l4Jl4JvygvcMdNW8m8FqAVYNRhx\ntG5WQvLGTC5KVmMHTtQGP2C9+VJHlPCyMZV1h6REVYZbA8CuZIKt3PKGw4J6Dly7\nbFRpMKvXzWFpdAzMbGVLxBZxQwKBgQDpGnydHteSmFxyCWBVFeEsGsQgbkxxJPXb\nYlaKyIO6Sw1qKkz7Qv1rvX5f2BNUogOUfDzWgOHVVthYbpl3GRGahdBDB2uFoHBC\nhWqw7IlEZbgL+g741yfxsDFi01hfjQJ37Tdd7VU0dvx8phPFNN+lH4+hr5pd2nm8\n9gGKnw3gQwKBgQCoyU58bpyloYTiJsuZgAGZ1KSyWUKgo+ontqP+IJdaW1GaC08w\ncBK48Ry99BnXIwixfOl1lL485leTp2DDC8XFhgUTrGKM9R2TysDqBPiS9jTs5pyV\n2C07e4Rrpa5wzAJIIJ28oQ2XmPfhjFkVzsExKf5KKiLLXijMrHRL+KJofQKBgBmt\nPDrGcfKI6+330G+u6E3GaQI1hCAWdSqES4ogCjqUF9cw76fhui6LAgemsoJpEkHh\n6YWrTrUESvJ6xFbVIRZHVSh9AcAHazY4ogb5Fym8lqhjFBEfChxaTyZWp25nBvWU\n4Lts8CzGSoukc5sOdvAmaNjjkfpynWROKN9PI+UnAoGBAIBr432NFl7F8Bes5Gzf\nPMJGmpFN4DBk+ADu6acSkQwOLSrTMFSUYHexFDWtdkIKjMg0BRxUgbyJm6S4MK/g\nFuyrUJ7HiMbrCbaVMHajsC1hcJlGtcgjQRTygyO7aOgJHKDkuszMsT0jFvHnjnhv\nBFr4HGQoOVeNUjKgPg2VCO3W\n-----END PRIVATE KEY-----\n",
+    "client_email": "chatsm@ayudabot-yodv.iam.gserviceaccount.com",
+    "client_id": "107091202124200552904",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/chatsm%40ayudabot-yodv.iam.gserviceaccount.com",
+    "universe_domain": "googleapis.com"
+  }
   

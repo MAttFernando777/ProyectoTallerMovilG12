@@ -1,0 +1,26 @@
+.barra {
+    background-color: #812f32;
+    color: #fff;
+  }
+  
+  .derecha{
+    float: right;
+    margin-right: 1% !important;
+    z-index: 1;
+    transform: translateY(-50%) !important;
+    background-color: black;
+  }
+  
+  .derecha-tab{
+    float: right;
+    margin-right: 2.5% !important;
+    z-index: 1;
+  }
+  
+  mat-header-cell {
+    font-size: 14px !important;
+    background-color: #812f32  !important;
+    color: white !important;
+  }
+  
+  
